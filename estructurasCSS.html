@@ -8,48 +8,74 @@
 <style>
     body{
         text-align: center;
-        background: #8cb8d6;
+        background: #e9e4da;
         margin: 0;
         padding: 0;
         color:#e9f2ff;
         font-size: 18px;
+        box-sizing: border-box;
     }
     nav{
-        background:#faebd7;
+        background:#4b42ad;
+    }
+    
+    header{
+        background:#0c2945;
+    }
+    .seccion{
+        background:#5084de;
+    }
+    footer{
+        background:#13193f;
+    }
+    a{
+        color:whitesmoke;
+    }
+    li{
+        text-align: left;
+    }
+    header, .seccion,footer, nav{
         padding: 1em;
-        position: absolute;
-        top: 0;
-        left: 0;
+    }
+    @media screen and (min-width: 600px){
+      /*Aqui inician los estilos de tablet*/
+      nav{
+        float: left;
         width: 20%;
         height: 600px;
     }
-    header,section,footer{
+    header, .seccion,footer{
         height: 200px;
     }
-    header{
-        background:#0c2945;
-        padding: 1em;
-
+    footer{
+       clear: left;
+        width: 100%;
     }
-    section{
-        background:#2b3737;
-        padding: 1em;
-
+      /*Aqui terminan los estilos de tablet*/ 
+    }
+    @media screen and (min-width: 1024px){
+      /*Aqui inician los estilos de desktop*/
+      nav{
+        background:#ad4280;
+    }
+    
+    header{
+        background:#dc68ac;
+    }
+    .seccion{
+        background:#eca0c6;
     }
     footer{
-        background:#6a4444;
-        padding: 1em;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
+        background:#762f58;
+    }
+      /*Aqui terminan los estilos de desktop*/ 
     }
 </style>
 </head>
     
 <body>
     <header>
-        <h1>Mi primer sitio</h1>
+        <h1>Estructura del sitio</h1>
     </header>
     <main> 
         <nav>
@@ -60,16 +86,18 @@
                 <!-- Agrega más elementos de menú según sea necesario -->
             </ul>
         </nav>
-
         <section>
-            <h2>Sección 1</h2>
-            <!-- Contenido de la Sección 1 -->
+            <section class="seccion">
+                <h2>Sección 1</h2>
+                <!-- Contenido de la Sección 1 -->
+            </section>
+    
+            <section class="seccion">
+                <h2>Sección 2</h2>
+                <!-- Contenido de la Sección 2 -->
+            </section>
         </section>
-
-        <section>
-            <h2>Sección 2</h2>
-            <!-- Contenido de la Sección 2 -->
-        </section>
+       
     </main>
 
     <footer>
