@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estructuras CSS</title>
-
+<link rel="stylesheet" href="flexboxgrid.min.css">
 <style>
     body{
         text-align: center;
@@ -39,16 +39,6 @@
     }
     @media screen and (min-width: 600px){
       /*Aqui inician los estilos de tablet*/
-      main{
-        display: flex;
-      }
-      nav{
-        width: 20%;
-    }
-    main > section{
-        flex: 1;
-
-    }
     header, .seccion,footer{
         height: 200px;
     }
@@ -75,25 +65,28 @@
 </head>
     
 <body>
-    <header>
-        <h1>Estructura del sitio</h1>
-    </header>
-    <main> 
-        <nav>
-            <ul>
+    <div class="row">
+        <header class="col-xs-12">
+            <h1 class="box">Encabezado de la Página</h1>
+        </header>
+    </div>
+   
+    <main class="row"> 
+        <nav class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+            <ul class="box">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Sección 1</a></li>
                 <li><a href="#">Sección 2</a></li>
                 <!-- Agrega más elementos de menú según sea necesario -->
             </ul>
         </nav>
-        <section>
-            <section class="seccion">
+        <section class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
+            <section class="seccion box">
                 <h2>Sección 1</h2>
                 <!-- Contenido de la Sección 1 -->
             </section>
     
-            <section class="seccion">
+            <section class="seccion box">
                 <h2>Sección 2</h2>
                 <!-- Contenido de la Sección 2 -->
             </section>
@@ -101,9 +94,13 @@
        
     </main>
 
-    <footer>
-        <p>&copy; 2024 Tu Página. Todos los derechos reservados.</p>
-    </footer>
+    <div class="row">
+        <footer class="col-xs-12">
+            <p class="box">&copy; 2024 Tu Página. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+  
 
 </body>
 </html>
